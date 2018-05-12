@@ -37,11 +37,13 @@ export default {
         // 表单验证失败
         if(!valid) return this.$message.error('请填写完整的登录信息！')
         // 发起登录请求
-        // 为什么它要点then？
-        // 什么时候用解构赋值，什么时候直接用res接收？
+        // 为什么要用await,本来拿到是promise返回的对象需要点then，用await接收了之后，就不用点then就可以拿到数据
+        // 什么时候用解构赋值，什么时候直接用res接收
+        // object{ data:{data: {…}, meta: {…}}} 
+        // 把Object中的data剥离出来，赋值为res
        const {data:res} = await this.$http.post('login', this.loginForm)
        if(res.meta.status !==200) return this.$message.error('登录失败！')
-       console.log(res)
+      //  console.log(res)
        this.$message.success('登录成功！')
       //  把服务器颁发的令牌存储到session storage中
        sessionStorage.setItem('token',res.data.token)

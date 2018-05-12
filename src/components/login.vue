@@ -18,7 +18,7 @@
        <el-form-item prop="password">
          <el-input placeholder="请输入密码"  v-model="loginForm.password" 
          :type="pwd? 'password':'text'">
-            <!-- 为什么要用slot的形式？ -->
+            <!-- 用slot的形式 -->
             <!-- 标签内部不能加变量，加变量要用v-bind属性绑定的形式 -->
              <i slot="prefix" :class="['iconfont', pwd ?'icon-3702mima':'icon-showpassword']" @click="fun1"></i>
         </el-input>

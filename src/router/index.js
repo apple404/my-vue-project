@@ -34,7 +34,7 @@ export default new Router({
       //重定向，展示完home页展示welcome页
       children:[  
         {path:'/welcome',component:welcome},
-        {path:'/users',components:users}
+        {path:'/users',component:users}
       ]
       //子路由 ，所有的功能页都放在Home的子路由中展示
      

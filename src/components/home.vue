@@ -15,7 +15,7 @@
       <el-aside width="200px" :style="{width:collapse?'65px':'200px'}">
         <div class="toggleBar" @click="collapse=!collapse">|||</div>
         
-         <el-menu :collapse="collapse" :collapse-transition="false" default-active="2" background-color="#333744"  text-color="#fff" :unique-opened="true" font-size:12px>
+         <el-menu :collapse="collapse" :collapse-transition="false" default-active="2" background-color="#333744"  text-color="#fff" :unique-opened="true" :router="true" font-size:12px>
             <!-- 第一个子菜单   -->
               <el-submenu :index="(i+1).toString()" v-for="(item,i) in menus" :key="item.id"
               :style="{width:collapse?'65px':'200px'}">

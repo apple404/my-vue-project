@@ -23,9 +23,11 @@ router.beforeEach((to,from,next)=>{
   next()
 })
 // 把axios挂载在Vue上面
-axios.defaults.baseURL = 'http://www.liulongbin.top:8888/api/private/v1/'
+axios.defaults.baseURL = 
+'http://127.0.0.1:8888/api/private/v1/'
 Vue.prototype.$http = axios
 
+// 'http://www.liulongbin.top:8888/api/private/v1/'
 // 在每次请求的请求头中添加token令牌
 axios.interceptors.request.use(function (config) {
   // 获取令牌

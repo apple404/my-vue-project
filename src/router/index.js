@@ -26,18 +26,17 @@ export default new Router({
       path: '/login',
       component: login
     },
-    //后台home页面
+    // 后台home页面
     {
-      path:'/home',
+      path: '/home',
       component: home,
-      redirect:'/welcome', 
-      //重定向，展示完home页展示welcome页
-      children:[  
-        {path:'/welcome',component:welcome},
-        {path:'/users',component:users}
+      redirect: '/welcome',
+      // 重定向，展示完home页展示welcome页
+      children: [
+        { path: '/welcome', component: welcome },
+        { path: '/users', component: users }
       ]
-      //子路由 ，所有的功能页都放在Home的子路由中展示
-     
+      // 子路由 ，所有的功能页都放在Home的子路由中展示
     }
   ]
 })
